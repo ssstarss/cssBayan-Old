@@ -1,0 +1,120 @@
+body { 
+    width: 100%;
+    height: 100%;
+    background: antiquewhite;
+   }
+  
+  h1 {
+      background: antiquewhite;
+      margin-left: 20px;
+  }
+  .box1, .box2, .box3,.box4,.box5 {
+      border: 1px solid #d3d3d3
+  }
+  .accordion {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      border: 1px solid #d3d3d3;
+      overflow: hidden;
+      color: #060606;
+      font-family: Verdana, sans-serif;
+      font-size: 20px;
+      background: antiquewhite;
+      }
+  
+  .accordion :hover {
+      cursor: pointer;
+     }
+  
+  .picture1, .picture2, .picture3, .picture4, .picture5 {
+      width: 400px;
+      margin: 0 auto;
+      height: 0px;
+      transition: color 0.5s, padding 0.5s;
+      overflow: hidden;
+      transition: height 0.5s ease-in-out;
+      -moz-transition: height 0.5s ease-in-out;
+      -webkit-transition: height 0.5s ease-in-out;
+      -o-transition: height 0.5s ease-in-out;
+  }
+  
+  .accordion input:checked  ~ .picture1 {
+      height: 300px;
+   }
+   
+  .accordion input:checked ~ .picture2 {
+      height: 300px;
+   }
+  .accordion input:checked ~ .picture3 {
+      height: 300px;
+   }
+   .accordion input:checked ~ .picture4 {
+      height: 300px;
+   }
+   .accordion input:checked ~ .picture5 {
+      height: 300px;
+   }
+  
+  .box1:hover .picture1 {
+      height: 300px;
+   }
+  
+  .box2:hover .picture2 {
+      height: 300px;
+  }
+  .box3:hover .picture3 {
+      height: 300px;
+  }
+  
+  .box4:hover .picture4 {
+      height: 300px;
+  }
+  .box5:hover .picture5 {
+      height: 300px;
+  }
+   .accordion:hover label {
+      color: blue;
+   }
+  
+  .accordion input {
+        display: none;
+  }
+  .accordion label {
+      
+      background-color: antiquewhite;
+      display: block;
+      padding: 15px 20px;
+      width: 500px;
+      color: black;
+      font-weight: bold;
+      font-family: Verdana, sans-serif;   
+      font-size: 20px;
+      margin: 0 0 5px;
+      transition: color .35s;
+     }
+  
+  .accordion label:before {
+      content: '\2B';
+      float: right;
+      opacity: 0;
+         
+  }
+  .accordion:hover  label:before {
+      opacity: 1;
+      font-size: 30px;
+  }
+  
+  .accordion input:checked + label:before {
+      transition: transform .35s;
+      transform: rotate(45deg);
+  }
+  
+  .accordion input:checked + label {
+      height: auto;
+      margin-top: -5px;
+      color: #000;
+      padding: 20px 30px 10px;
+  }
